@@ -1,9 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,600');
+body * {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+.container {
+  margin: 20px auto;
+  max-width: 640px;
+  width: 100%;
+}
 #headForm {
   display: flex;
   flex-flow: row nowrap;
-  margin: 10px 0;
   width: 100%;
 }
 #headForm * {
+  border: 1px solid lightgray;
+  font-size: 1em;
   padding: 10px;
+}
+#headForm input {
+  border-right: none;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  flex: 1 50%;
+}
+#headForm button {
+  background: lightgray;
+  border-bottom-right-radius: 2px;
+  border-color: darkgray;
+  border-top-right-radius: 2px;
+  color: #666;
+  flex-grow: 0;
+  padding: 10px 20px;
+}
+h2 {
+  font-family: 'Handlee', Helvetica, sans-serif;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  padding: 2px 0;
+}
+.checkbox {
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin-right: 4px;
+  padding: 1px 4px;
+}
+.checkbox:hover {
+  background: lightgray;
+}
+.unchecked {
+  background: white;
+  color: white;
+}
+.checked {
+  background: gray;
+  color: white;
 }

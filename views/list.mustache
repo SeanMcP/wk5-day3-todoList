@@ -3,7 +3,7 @@
   {{#todo}}
     <li>
       <form class="" action="/done" method="post">
-        <button type="submit" name="task" value="{{.}}">&#10003;</button>
+        <button class="checkbox unchecked" type="submit" name="task" value="{{.}}">&#10003;</button>
         {{.}}
       </form>
     </li>
@@ -12,15 +12,14 @@
     <li>You're all done!</li>
   {{/todo}}
 </ul>
-<hr>
 <h2>Completed</h2>
 <ul>
   {{#done}}
     <li>
       <form class="" action="/todo" method="post">
-        <button type="submit" name="task" value="{{.}}">&#10003;</button>
-        {{.}}
-      </form>      
+        <button class="checkbox checked" type="submit" name="task" value="{{.}}">&#10003;</button>
+        <del>{{.}}</del>
+      </form>
     </li>
   {{/done}}
   {{^done}}

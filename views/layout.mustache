@@ -6,14 +6,16 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <header>
-      <form id="headForm" action="/add" method="post">
-        <input type="text" name="task" value="" placeholder="What do you need todo?">
-        <button type="submit" name="button">Add Task</button>
-      </form>
-    </header>
-    <main>
-      {{{yield}}}
-    </main>
+    <div class="container">
+      <header>
+        <form id="headForm" action="/add" method="post">
+          <input type="text" name="task" value="" placeholder="What do you need todo?">
+          <button type="submit" name="button">Add Task</button>
+        </form>
+      </header>
+      <main>
+        {{{yield}}}
+      </main>
+    </div>
   </body>
 </html>
