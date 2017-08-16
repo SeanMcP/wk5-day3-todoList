@@ -1,0 +1,10 @@
+{{#todoList}}
+  <ul>
+    {{#done}}
+      <li><del>{{task}}</del></li>
+    {{/done}}
+    {{^done}}
+      <li>{{task}}</li>
+    {{/done}}
+  </ul>
+{{/todoList}}
