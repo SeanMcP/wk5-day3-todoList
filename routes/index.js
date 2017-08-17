@@ -9,8 +9,10 @@ router.get('/', function(req, res){
 });
 
 router.post('/add', function(req, res){
-  todoList.push(req.body.task);
-  res.redirect('/');
+  if(req.body.task){
+    todoList.push(req.body.task);
+    res.redirect('/');
+  }
 });
 
 router.post('/done', function(req, res){
