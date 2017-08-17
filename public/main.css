@@ -24,7 +24,7 @@ body * {
   flex: 1 50%;
 }
 #headForm button {
-  background: lightgray;
+  background: linear-gradient(#f1f1f1, lightgray);
   border-bottom-right-radius: 2px;
   border-color: darkgray;
   border-top-right-radius: 2px;
@@ -32,18 +32,32 @@ body * {
   flex-grow: 0;
   padding: 10px 20px;
 }
+#headForm button:hover {
+  background: #f1f1f1;
+}
+#headForm button:active {
+  background: lightgray;
+}
+main {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.lists {
+  flex: 1 40%;
+}
+h1 {
+  font-family: 'Handlee', Helvetica, sans-serif;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 10px;
+}
 h2 {
   font-family: 'Handlee', Helvetica, sans-serif;
   font-size: 2em;
-  margin-bottom: 0;
+  margin: 30px 0 0;
 }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-  padding: 2px 0;
+table td {
+  vertical-align: top;
 }
 .checkbox {
   border: 1px solid gray;
@@ -61,4 +75,9 @@ li {
 .checked {
   background: gray;
   color: white;
+}
+@media (max-width: 400px) {
+  main {
+    flex-flow: column nowrap;
+  }
 }

@@ -1,28 +1,40 @@
-<h2>Todo</h2>
-<ul>
-  {{#todo}}
-    <li>
-      <form class="" action="/done" method="post">
-        <button class="checkbox unchecked" type="submit" name="task" value="{{.}}">&#10003;</button>
-        {{.}}
-      </form>
-    </li>
-  {{/todo}}
-  {{^todo}}
-    <li>You're all done!</li>
-  {{/todo}}
-</ul>
-<h2>Completed</h2>
-<ul>
-  {{#done}}
-    <li>
-      <form class="" action="/todo" method="post">
-        <button class="checkbox checked" type="submit" name="task" value="{{.}}">&#10003;</button>
-        <del>{{.}}</del>
-      </form>
-    </li>
-  {{/done}}
-  {{^done}}
-    <li>Keep working!</li>
-  {{/done}}
-</ul>
+<div class="lists">
+  <h2>To-do</h2>
+  <table>
+    {{#todo}}
+    <tr>
+      <td>
+        <form action="/done" method="post">
+          <button class="checkbox unchecked" type="submit" name="task" value="{{.}}">&#10003;</button>
+        </form>
+      </td>
+      <td>{{.}}</td>
+    </tr>
+    {{/todo}}
+    {{^todo}}
+    <tr>
+      <td>You're all done!</td>
+    </tr>
+    {{/todo}}
+  </table>
+</div>
+<div class="lists">
+  <h2>Completed</h2>
+  <table>
+    {{#done}}
+    <tr>
+      <td>
+        <form action="/todo" method="post">
+          <button class="checkbox checked" type="submit" name="task" value="{{.}}">&#10003;</button>
+        </form>
+      </td>
+      <td>{{.}}</td>
+    </tr>
+    {{/done}}
+    {{^done}}
+    <tr>
+      <td>Keep working!</td>
+    </tr>
+    {{/done}}
+  </table>
+</div>
