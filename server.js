@@ -12,7 +12,7 @@ app.set('view engine', 'mustache');
 app.set('layout', 'layout');
 
 // Access static files in public dir
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
